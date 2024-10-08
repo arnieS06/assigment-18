@@ -1,7 +1,7 @@
 #include <iostream>
+#include "bubbleSort.hpp"
+#include "printArray.hpp"
 using namespace std;
-
-void bubbleSort(int arrayOfNumbers[], int numberOfIntegers);
 
 int main() {
 
@@ -16,15 +16,14 @@ int main() {
         cin >> arrayOfNumbers[i];
     }
 
+    cout << "\n";
 
-}
+    printArray(arrayOfNumbers, numberOfIntegers);
 
-void bubbleSort(int arrayOfNumbers[], int numberOfIntegers) {
-    for (int i = 0; i < numberOfIntegers; i++) {
-        if (arrayOfNumbers[i] > arrayOfNumbers[i + 1]) {
-            
+    bubbleSort(arrayOfNumbers, numberOfIntegers);
 
+    printArray(arrayOfNumbers, numberOfIntegers);
 
-        }
-    }
+    return 0;
+
 }
